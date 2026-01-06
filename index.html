@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tap 😈</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: white;
+      font-size: 2em;
+      text-align: center;
+      user-select: none;
+    }
+  </style>
+</head>
+<body onclick="playAudio()">
+  TAP ANYWHERE 😈
+
+  <audio id="audio">
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById("audio");
+      audio.volume = 1.0;
+      audio.play();
+      document.body.innerHTML = "🎵 GOT YOU 🎵";
+    }
+  </script>
+</body>
+</html>
